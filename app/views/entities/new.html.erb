@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ManageBudget</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    
+    <section class="body">
+      <div class="box form">
+        <h1>Add New Transaction</h1>
+
+        <%= form_with model: @entity do |f| %>
+
+          <div class="mb-3">
+            <%= f.label :name %>
+            <%= f.text_field :name, required: true, class: "form-control"%>
+          </div>
+
+          <div class="mb-3">
+              <%= f.label :amount %>
+              <%= f.number_field :amount, required: true, min: 1, class: "form-control"%>
+          </div>
+        
+          <div class="mb-3">
+            <%= f.fields_for(@relation) do |r| %>
+              <%= r.label :group%>
+              <%= r.select :group_id, current_user.groups.collect { |group| [group.name, group.id]}, {include_blank: true}, required: true, class: "form-control"%>
+            <% end %>   
+          </div>
+
+          <div class="mb-3">
+            <%= f.submit class: "first-btn" %>
+          </div>
+
+        <%end%>
+      </div>
+    </section>
+
+
+  </body>
+</html>
