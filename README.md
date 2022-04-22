@@ -10,7 +10,7 @@ This is a mobile web application where you can manage your budget: you have a li
 # Presentation
 - [Presentation-video]()
 # Live-demo
-- [Live-demo]()
+- [Live-demo](https://fast-scrubland-47961.herokuapp.com/)
 ## Built With
 
 - Ruby
