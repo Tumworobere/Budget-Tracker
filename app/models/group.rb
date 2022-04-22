@@ -19,4 +19,3 @@ class Group < ApplicationRecord
     @total
   end
 end
-

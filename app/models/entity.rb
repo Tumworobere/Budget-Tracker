@@ -8,4 +8,3 @@ class Entity < ApplicationRecord
     attributes['created_at'].strftime('%d %b %Y')
   end
 end
-
