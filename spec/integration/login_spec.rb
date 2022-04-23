@@ -9,7 +9,7 @@ RSpec.describe 'Login Features', type: :feature do
   end
 
   it 'Should redirected to the root page when clicking submit button with correct data' do
-    @user1 = User.create! name: 'samara', password: 'samu@2022', email: 'samara@gmail.com'
+    @user1 = User.create! name: 'Bonnes Samara', password: 'samu@2022', email: 'samara@gmail.com'
     visit new_user_session_path
     fill_in('Email', with: 'samara@gmail.com')
     fill_in('Password', with: 'samu@2022')
