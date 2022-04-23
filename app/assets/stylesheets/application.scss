@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+ *= require font-awesome
+*/
+@import "bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  height: 100vh;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  height: 100vh;
+  background-color: #f0f2f5;
+  padding: 2em;
+}
+
+.box {
+  background-color: white;
+  height: 29em;
+  width: 50vw;
+  padding: 1em;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: -5px 6px 14px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -5px 6px 14px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 6px 14px -1px rgba(0, 0, 0, 0.75);
+  min-width: 15em;
+  max-width: 25em;
+}
+
+.box h1 {
+  color: #5fb523;
+  font-weight: bolder;
+  font-size: 2em;
+  align-self: center;
+}
+
+.box a {
+  text-decoration: none;
+  color: white;
+}
+
+.first-btn {
+  display: block;
+  width: 100%;
+  color: white;
+  background-color: #5fb523;
+  padding: 12px;
+  border-radius: 0.5em;
+}
+
+.login a,
+.signup a {
+  color: #5fb523;
+}
+
+.signup {
+  height: 36em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 10px;
+  background-color: #5fb523;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.category {
+  background-color: white;
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  border-radius: 0.5em;
+  box-shadow: -5px 6px 14px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -5px 6px 14px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 6px 14px -1px rgba(0, 0, 0, 0.75);
+  margin-bottom: 2em;
+}
+
+.category img {
+  height: 100%;
+  min-width: 5em;
+  width: 50%;
+  border-radius: 0.5em;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.flex a {
+  text-decoration: none;
+  color: #434b54;
+}
+
+.credit {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2em;
+  color: #434b54;
+  height: 6.5em;
+}
+
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #3778c2;
+  border: 1px solid #3778c2;
+}

@@ -1,8 +1,32 @@
-<% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Sign out", destroy_user_session_path, method: :get %>
-    <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ManageBudget</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+    <section class="body">
+
+      <div class="box">
+
+        <h1>Manage Budget</h1>
+
+        <%= link_to new_user_registration_path, :class => 'navbar-link', :remote => true do  %>
+          <input type="button" class="first-btn" value="SIGN UP">
+        <%end%>
+        <%= link_to new_user_session_path, :class => 'navbar-link', :remote => true do  %>
+          <input type="button" class="first-btn" value="LOG IN">
+        <%end%>
+        
+      </div>
+
+    </section>
+    
+  </body>
+</html>

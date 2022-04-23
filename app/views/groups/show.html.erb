@@ -1,0 +1,36 @@
+<%= render "partials/nav" %>
+<div class="credit">
+  <h3>Gift Credit</h3>
+  <h3>$<%=@group.self_total(@group.id)%>.00</h3>
+</div>
+
+<section class="main">
+
+<%@relations.each do |relation|%>
+  <%entity = Entity.find(relation.entity_id)%>
+  <div class="category">
+    <img src=<%=@group.icon%> alt="icon">
+    
+    <div class="flex">
+      <h3><%=entity.name%></h3>
+      <p><%=entity.created_at%></p>
+    </div>
+    <div class="flex">
+      <h3>$<%=entity.amount%>.00</h3>
+      <%= button_to "Delete", entity_path(entity.id), html: {'data-turbo' => "false"}, :method => :delete, class: "btn btn-danger" %>
+    </div>
+  </div>
+<%end%>
+
+<div class="flex1">
+
+<%= link_to new_entity_path, :remote => true do %>
+  <input type="button" class="btn btn-primary" value="Add transaction">
+<% end %>
+<%= link_to groups_path, :remote => true do %>
+  <input type="button" class="btn btn-primary" value="Back">
+<% end %>
+
+</div>
+
+</section>
