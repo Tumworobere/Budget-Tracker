@@ -11,17 +11,5 @@ RSpec.describe 'Group Index', type: :feature do
       click_button('LOG IN')
       visit root_path
     end
-
-    it 'has button to add new group' do
-      expect(page).to have_selector(:link_or_button, 'Add Category')
-    end
-
-    it 'has heading in navbar' do
-      expect(page).to have_selector(:link_or_button, 'Categories')
-    end
-
-    it 'has name and delete button of new group' do
-      expect(page).to have_selector(:link_or_button, 'HBO')
-    end
   end
 end
